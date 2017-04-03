@@ -37,6 +37,7 @@ var Reporter = (function () {
                     }
                     unmappedCollector.add(coverage);
                     var sourceStore = istanbul_1.Store.create("memory");
+                    remapOptions = config.remapOptions;
                     remapOptions.sources = sourceStore;
                     remapOptions.readFile = function (filepath) {
                         return sharedProcessedFiles[filepath];
